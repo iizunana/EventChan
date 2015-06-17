@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :events
 
+=======
+  devise_for :users
+>>>>>>> 135eb3e28086e66c2a2f287d03c11a3f6cf4d81a
   get 'pages/eventTop'
 
   # The priority is based upon order of creation: first created -> highest priority.
