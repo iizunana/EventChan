@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-
+  root to: redirect('/evnts')
   resources :events
-
   devise_for :users
 
-  get 'pages/eventTop'
+  # get 'pages/eventTop'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
