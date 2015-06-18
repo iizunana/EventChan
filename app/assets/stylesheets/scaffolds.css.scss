@@ -2,19 +2,22 @@ body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 10px;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   line-height: 18px;
+  padding: 6px;
+  color: #567;
 }
 
 pre {
   background-color: #eee;
-  padding: 10px;
+  padding: 30px;
   font-size: 11px;
 }
 
@@ -31,7 +34,7 @@ a {
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -66,4 +69,5 @@ div {
     font-size: 12px;
     list-style: square;
   }
+
 }
