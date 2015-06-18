@@ -1,12 +1,10 @@
-<h1>Listing events</h1>
+<h1>Event List</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Eventname</th>
-      <th>Eventdate</th>
-      <th>Eventplace</th>
-      <th>Eventcomment</th>
+      <th>イベント名</th>
+      <th>日時</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +13,7 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= event.eventName %></td>
-        <td><%= event.eventDate %></td>
-        <td><%= event.eventPlace %></td>
-        <td><%= event.eventComment %></td>
+        <td><%= event.startEvent.strftime("%y/%m/%d\(%a\)") %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
