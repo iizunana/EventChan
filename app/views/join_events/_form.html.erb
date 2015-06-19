@@ -13,12 +13,12 @@
 
 <div class="field">
     <%= f.label :社員ID %><br>
-  <%= f.text_field(:userid ,:readonly => true) %>
+  <%= f.text_field(:user_id ,:readonly => true) %>
    </div>
 
 <div class="field">
     <%= f.label :イベント番号 %><br>
-  <%= f.text_field(:eventid,:readonly => true) %>
+  <%= f.text_field(:event_id,:readonly => true) %>
   </div>
 
 
@@ -30,6 +30,7 @@
 <div class="field">
     <%= f.label :一言コメント %><br>
     <%= f.text_area :comment %>
+  <%= f.hidden_field :event_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -4,7 +4,8 @@ class JoinEventsController < ApplicationController
   respond_to :html
 
   def index
-    @join_events = JoinEvent.all
+    event_id = params["event_id"]
+    @join_events = JoinEvent.all.where(event_id: event_id)
     respond_with(@join_events)
   end
 
@@ -14,6 +15,7 @@ class JoinEventsController < ApplicationController
 
   def new
     @join_event = JoinEvent.new
+    @join_event.event_id = params[:event_id]
     respond_with(@join_event)
   end
 
@@ -21,7 +23,8 @@ class JoinEventsController < ApplicationController
   end
 
   def create
-    @join_event = JoinEvent.new(join_event_params)
+    @join_event = JoinEvent.new(join_event_params) 
+    @join_event.event_id = 
     @join_event.save
     respond_with(@join_event)
   end
@@ -42,6 +45,6 @@ class JoinEventsController < ApplicationController
     end
 
     def join_event_params
-      params.require(:join_event).permit(:userid, :eventid, :status, :comment)
+      params.require(:join_event).permit(:user_id, :event_id, :status, :comment)
     end
 end

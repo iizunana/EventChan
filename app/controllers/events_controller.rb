@@ -39,6 +39,8 @@ class EventsController < ApplicationController
   private
     def set_event
       @event = Event.find(params[:id])
+      @join_events = @event.join_events.all
+      @join_event = @event.join_events.build
     end
 
     def event_params

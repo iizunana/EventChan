@@ -5,6 +5,8 @@ class PagesController < ApplicationController
   def setname
 #    logger.info current_user.inspect
     @user = current_user
+    @join_events = @user.join_events.all
+    @join_event = @user.join_events.build
   end
   
   def update

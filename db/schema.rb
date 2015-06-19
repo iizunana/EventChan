@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150618065109) do
+ActiveRecord::Schema.define(version: 20150619043915) do
 
   create_table "events", force: true do |t|
     t.string   "eventName"
@@ -24,12 +24,12 @@ ActiveRecord::Schema.define(version: 20150618065109) do
   end
 
   create_table "join_events", force: true do |t|
-    t.integer  "userid"
-    t.integer  "eventid"
     t.integer  "status"
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "event_id"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|
