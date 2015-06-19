@@ -1,30 +1,43 @@
 body {
-  background-color: #fff;
+  background-color: #eee;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 18px;
   line-height: 20px;
-  padding: 10px;
+  font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
 }
+
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 10px;
+  color: #555;
+}
+
+th.thead{
   font-size: 20px;
   line-height: 18px;
-  padding: 6px;
-  color: #567;
 }
+tr{
+  border: 2px solid #bbb;
+  -webkit-border-radius: 10px;
+  background-color: #fff;
+}
+
 
 pre {
   background-color: #eee;
-  padding: 30px;
+  padding: 10px;
   font-size: 11px;
 }
 
 a {
-  color: #000;
+  color: #f0f;
+  font-weight: bolder;
   &:visited {
-    color: #666;
+    color: #555;
   }
   &:hover {
     color: #fff;
@@ -33,9 +46,11 @@ a {
 }
 
 div {
+  font-size: 15px;
   &.field, &.actions {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
+  
 }
 
 #notice {
@@ -68,6 +83,9 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+  }
+  h1{
+    font-size: small;
   }
 
 }

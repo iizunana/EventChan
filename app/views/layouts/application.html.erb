@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EventChan</title>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <title>イベントちゃん</title>
   
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -14,7 +15,7 @@
 </head>
 <body>
   
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -23,21 +24,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Event-chan</a>
+      <a class="navbar-brand" href="/">イベントちゃん</a>
     </div>
     <div class="collapse navbar-collapse">
       <p class="navbar-text pull-right">
 <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  ようこそ <strong><%= current_user.email %></strong>さん　｜
+  <%= link_to 'アカウント編集', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  <%= link_to "新規アカウント登録", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "ログイン", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/events">Events</a></li>
-        <li><%= link_to 'New Event', new_event_path %></li>
+        <li><a href="/events">イベント一覧</a></li>
+        <li><%= link_to '新規イベント作成', new_event_path %></li>
       </ul>
     </div>
   </div>
@@ -54,9 +55,7 @@
 </div>
   
 <footer>
-  <div class="container">
-    Event Chan 2015
-  </div>
+  
 </footer>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
