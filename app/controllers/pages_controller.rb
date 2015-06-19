@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   def update
     @user = current_user
     @user.update_attribute(:username, params['user']['username'])
-    redirect_to "/pages/setname"
+    redirect_to "/events"
     #@user.username = params["username"]
     #@user.save!
     #@user.update_without_password(username: params["username"])
