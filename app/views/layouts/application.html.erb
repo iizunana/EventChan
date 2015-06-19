@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse">
       <p class="navbar-text pull-right">
 <% if user_signed_in? %>
-  ようこそ <strong><%= current_user.email %></strong>さん　｜
+        ようこそ <strong><%= current_user.username %></strong>さん　｜
   <%= link_to 'アカウント編集', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
