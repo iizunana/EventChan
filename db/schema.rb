@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 20150618065109) do
     t.datetime "endEvent"
   end
 
+  create_table "join_events", force: true do |t|
+    t.integer  "userid"
+    t.integer  "eventid"
+    t.integer  "status"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
