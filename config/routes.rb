@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   get 'pages/setname'
 
   root to: redirect('/pages/setname')
+=======
+ 
+  root to: redirect('/events')
+>>>>>>> 18aa92b9065b0c194e2faa054ec7dba428c0377c
   resources :events
+  resources :join_events
   devise_for :users
 
   get "pages/setname"
