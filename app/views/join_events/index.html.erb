@@ -20,10 +20,10 @@
         <td><%= join_event.event_id %></td>
         <!--<td><%= join_event.status %></td>  -->
         <td><%= join_event.comment %></td>
-        <td><%= link_to 'Show_', join_event %></td>
-        <td><%= link_to 'Edit_', edit_join_event_path(join_event) %></td>
+        <td><%= link_to '詳細', join_event %></td>
+        <td><%= link_to '編集', edit_join_event_path(join_event) %></td>
 
-       <td><%= link_to 'Destroy_', join_event, method: :delete, data: { confirm: 'Are you shure?' } %></td>
+       <td><%= link_to '削除', join_event, method: :delete, data: { confirm: 'Are you shure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 <br>
 
 <%= link_to 'このイベントに参加', new_join_event_path %>
-<%= link_to 'Back', events_path %>
+<%= link_to '戻る', events_path %>
