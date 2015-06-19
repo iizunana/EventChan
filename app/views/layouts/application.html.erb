@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>EventChan</title>
+  
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
@@ -35,6 +37,7 @@
 <% end %>
       <ul class="nav navbar-nav">
         <li class="active"><a href="/events">Events</a></li>
+        <li><%= link_to 'New Event', new_event_path %></li>
       </ul>
     </div>
   </div>
