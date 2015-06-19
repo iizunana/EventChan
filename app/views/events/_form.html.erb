@@ -12,22 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :eventName %><br>
+    <%= f.label :イベント名 %><br>
     <%= f.text_field :eventName %>
   </div>
   <div class="field">
-    <%= f.label :eventDate %><br>
-    <%= f.text_field :eventDate %>
+    <%= f.label :開催日時 %><br>
+    <%= f.datetime_select(:startEvent, :use_month_numbers => true) %>
   </div>
   <div class="field">
-    <%= f.label :eventPlace %><br>
+    <%= f.label :終了日時 %><br>
+    <%= f.datetime_select(:endEvent, :use_month_numbers => true) %>
+  </div>
+  <div class="field">
+    <%= f.label :開催場所 %><br>
     <%= f.text_field :eventPlace %>
   </div>
   <div class="field">
-    <%= f.label :eventComment %><br>
-    <%= f.text_field :eventComment %>
+    <%= f.label :特記事項 %><br>
+    <%= f.text_area(:eventComment,:maxlength => "200") %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "登録する" %>
   </div>
 <% end %>

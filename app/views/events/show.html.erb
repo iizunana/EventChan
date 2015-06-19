@@ -1,22 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Eventname:</strong>
+  <strong>イベント名:</strong>
   <%= @event.eventName %>
 </p>
 
 <p>
-  <strong>Eventdate:</strong>
-  <%= @event.eventDate %>
+  <strong>開催日時:</strong>
+  <%= @event.startEvent.strftime('%Y年%m月%d日(%a)  %H:%M:%S') %>
 </p>
 
 <p>
-  <strong>Eventplace:</strong>
+  <strong>終了日時:</strong>
+  <%= @event.endEvent.strftime('%Y年%m月%d日(%a) %H:%M:%S') %>
+</p>
+
+<p>
+  <strong>開催場所:</strong>
   <%= @event.eventPlace %>
 </p>
 
 <p>
-  <strong>Eventcomment:</strong>
+  <strong>特記事項:</strong>
   <%= @event.eventComment %>
 </p>
 

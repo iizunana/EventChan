@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  resources :join_events
-
+ 
   root to: redirect('/events')
   resources :events
+  resources :join_events
   devise_for :users
 
+  get "pages/setname"
   # get 'pages/eventTop'
 
   # The priority is based upon order of creation: first created -> highest priority.
