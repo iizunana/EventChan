@@ -4,7 +4,9 @@ class PagesController < ApplicationController
   
   def setname
 #    logger.info current_user.inspect
-    @user = current_user
+    if @user.nil? then
+      @user = current_user
+    end
   end
   
   def update
