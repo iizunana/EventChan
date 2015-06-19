@@ -1,0 +1,38 @@
+<%= form_for(@join_event) do |f| %>
+  <% if @join_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@join_event.errors.count, "error") %> prohibited this join_event from being saved:</h2>
+
+      <ul>
+      <% @join_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+    <%= f.label :社員ID %><br>
+  <%= f.text_field(:userid ,:readonly => true) %>
+   </div>
+
+<div class="field">
+    <%= f.label :イベント番号 %><br>
+  <%= f.text_field(:eventid,:readonly => true) %>
+  </div>
+
+
+<!--  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>   -->
+ 
+<div class="field">
+    <%= f.label :一言コメント %><br>
+    <%= f.text_area :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
