@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   get "pages/setname"
+  patch 'pages/update'
   # get 'pages/eventTop'
 
   # The priority is based upon order of creation: first created -> highest priority.
