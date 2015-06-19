@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>社員ID:</strong>
+  <%= @join_event.userid %>
+</p>
+
+<p>
+  <strong>イベントID:</strong>
+  <%= @join_event.eventid %>
+</p>
+
+
+<!--
+<p>
+  <strong>Status:</strong>
+  <%= @join_event.status %>
+</p>
+-->
+
+
+<p>
+  <strong>一言コメント:</strong>
+  <%= @join_event.comment %>
+</p>
+
+<%= link_to 'Edit', edit_join_event_path(@join_event) %> |
+<%= link_to 'Back', join_events_path %>

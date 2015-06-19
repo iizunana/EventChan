@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :join_events
+
   root to: redirect('/events')
   resources :events
   devise_for :users
